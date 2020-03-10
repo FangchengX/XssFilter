@@ -29,6 +29,11 @@ public class XssFilterAspect {
     XssService xssService;
 
 
+    /**
+     * 切入点为controller包中的所有方法
+     *
+     * @param joinPoint 切点参数
+     */
     @Before("execution(* com.adoujia.xssdemo.controller..*.*(..))")
     public void xssFilter(JoinPoint joinPoint) {
         Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();

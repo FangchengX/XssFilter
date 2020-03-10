@@ -56,6 +56,7 @@ public class XssTestControllerTest {
         Document normalDoc = Jsoup.parse(result.getNormal());
         Elements normalElements = normalDoc.select("style");
         Assert.assertEquals(0, normalElements.size());
-        log.info(JSON.toJSONString(result));
+        System.out.println("默认过滤后结果：\n" + result.getNormal());
+        System.out.println("自定义html过滤结果：\n" + result.getHtml());
     }
 }
