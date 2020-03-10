@@ -93,7 +93,7 @@ public class XssFilterAspect {
      * @param methods   所有方法
      * @param filedName 字段名
      * @param isGet     是否get方法
-     * @return
+     * @return set/get 函数
      */
     private Method findMethod(Method[] methods, String filedName, boolean isGet) {
         String prefix = isGet ? "get" : "set";
